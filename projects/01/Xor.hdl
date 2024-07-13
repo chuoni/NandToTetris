@@ -13,8 +13,8 @@ CHIP Xor {
     PARTS:
     //// Replace this comment with your code.
     Not(in= a, out= o1);
-    Nand(a= o1, b= b, out=o2 );
+    And(a= o1, b= b, out=o2 );
     Not(in= b, out=o3 );
-    Nand(a= a, b=o3 , out=o4 );
-    Nand(a=o2 , b=o4 , out=out );
+    And(a= a, b=o3 , out=o4 );
+    Or(a=o2 , b=o4 , out=out );
 }
